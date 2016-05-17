@@ -1,0 +1,97 @@
+\documentclass{beamer}
+
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamertemplate{section in toc shaded}[default][50]
+\setbeamertemplate{frametitle}[default][right]
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{framesubtitle}{fg=black}
+\setbeamercolor{navigation symbols}{fg=white, bg=white}
+\setbeamertemplate{sidebar right}{}
+\addtobeamertemplate{footline}{%
+    \hfill\usebeamertemplate***{navigation symbols}
+    \hspace*{1em}\par\vspace{1pt}
+}{}
+
+\usepackage[UTF8]{ctex}
+\usepackage[sort&compress]{natbib}
+\usepackage{graphicx}
+
+\AtBeginSection[]
+{%
+    \begin{frame}<beamer>
+    \frametitle{目录}
+    \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\title{标题}
+\author{学生：姓名 \\ 导师：姓名 \\ 院系}
+\date{\today}
+
+\begin{document}
+
+\usebackgroundtemplate{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{img/title.png}
+}
+
+\frame{\titlepage}
+
+\usebackgroundtemplate{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{img/content.png}
+}
+
+\begin{frame}
+    \frametitle{目录}
+    \tableofcontents[subsubsectionstyle=hide]
+\end{frame}
+
+\section{第一章节}
+
+\begin{frame}
+    \frametitle{正标题}
+    \framesubtitle{副标题}
+    \begin{itemize}
+        \item 英文参考文献\cite{test-en}
+        \item 中文参考文献\cite{test-zh}
+        \item 脚注1\footnote{脚注1内容}
+        \item 脚注2\footnote{脚注2内容}
+    \end{itemize}
+\end{frame}
+
+\section{第二章节}
+
+\begin{frame}
+    \frametitle{正标题}
+    \begin{columns}
+        \column{.5\textwidth}
+        \begin{itemize}
+            \item 第一栏
+        \end{itemize}
+        \column{.5\textwidth}
+        第二栏
+    \end{columns}
+\end{frame}
+
+\section*{参考文献}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{参考文献}
+    \small
+    \bibliographystyle{plain}
+    \bibliography{main}
+\end{frame}
+
+\section*{}
+
+\usebackgroundtemplate{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{img/title.png}
+}
+
+\begin{frame}
+    \centering
+    \Huge 谢谢！\\
+    请老师批评指正
+\end{frame}
+
+\end{document}
