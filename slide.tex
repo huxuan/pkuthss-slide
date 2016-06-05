@@ -1,13 +1,23 @@
 \documentclass{beamer}
 
-\setbeamercolor{title}{fg=black}
-\setbeamercolor{section in toc}{fg=black}
-\setbeamertemplate{section in toc shaded}[default][50]
-\setbeamertemplate{frametitle}[default][right]
-\setbeamercolor{frametitle}{fg=white}
 \setbeamercolor{framesubtitle}{fg=black}
+\setbeamercolor{frametitle}{fg=white}
 \setbeamercolor{navigation symbols}{fg=white, bg=white}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{title}{fg=black}
+\setbeamerfont{framesubtitle}{series=\bfseries, size=\large}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{institute}{size=\normalsize}
+\setbeamerfont{section in toc}{series=\bfseries}
+\setbeamerfont{subsection in toc}{series=\bfseries}
+\setbeamerfont{title}{series=\bfseries}
+\setbeamertemplate{frametitle}[default][right]
+\setbeamertemplate{section in toc shaded}[default][50]
+\setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{sidebar right}{}
+\setbeamertemplate{subsection in toc shaded}[default][50]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
 \addtobeamertemplate{footline}{%
     \hfill\usebeamertemplate***{navigation symbols}
     \hspace*{1em}\par\vspace{1pt}
@@ -26,7 +36,8 @@
 }
 
 \title{标题}
-\author{学生：姓名 \\ 导师：姓名 \\ 院系}
+\author{学生：姓名 \\ 导师：姓名}
+\institute{院系}
 \date{\today}
 
 \begin{document}
@@ -73,7 +84,7 @@
     \end{columns}
 \end{frame}
 
-\section*{参考文献}
+\section{参考文献}
 
 \begin{frame}[allowframebreaks]
     \frametitle{参考文献}
